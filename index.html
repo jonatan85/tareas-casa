@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador de Tareas de Casa</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-gray-100 h-screen">
+      <h1 class="font-black text-5xl text-center md:w-2/3 mx-auto mt-20">
+          Seguimiento Tareas
+          <span class="text-indigo-700">De Casa</span>
+      </h1>
+
+      <div class="mt-12 md:flex container mx-auto ">
+          <div class="md:w-1/2 lg:w-2/5 mx-5">
+            <h2 class="font-black text-3xl text-center">Añade Tareas</h2>
+
+            <p class="text-lg mt-5 text-center mb-10">
+                Añade las
+                <span class="text-indigo-600 font-bold">Tareas que Realices</span>
+            </p>
+
+            <form 
+                id="formulario-tareas"
+                class="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+            >
+                <div class="mb-5">
+                    <label for="nombre" class="block text-gray-700 uppercase font-bold text-sm">
+                        Nombre:
+                    </label>
+                    <input
+                        class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        type="text"
+                        id="nombre"
+                        placeholder="Nombre"
+                        name="nombre"
+                    />  
+                </div>
+
+                <div class="mb-5">
+                    <label for="tarea" class="block text-gray-700 uppercase font-bold text-sm">
+                        Tarea:
+                    </label>
+                    <input
+                        class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        type="text"
+                        id="tarea"
+                        placeholder="Tarea"
+                        name="tarea"
+                    />  
+                </div>
+                
+                <div class="mb-5">
+                    <label for="fecha" class="block text-gray-700 uppercase font-bold text-sm">
+                        Fecha: 
+                    </label>
+                    <input
+                        class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                    />  
+                </div>
+
+                <div class="mb-5">
+                    <label for="descripcion" class="block text-gray-700 uppercase font-bold text-sm">
+                        Descripción de la Tarea
+                    </label>
+                    <textarea
+                        class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        id="descripcion"
+                        name="descripcion"
+                        placeholder="Descripción de la Tarea"
+                    ></textarea>  
+                </div>
+
+                <input
+                    type="submit"
+                    class="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+                    value='Registrar Tarea'
+                />
+              </form>
+          </div>
+
+          <div class="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+              <h2 class="font-black text-3xl text-center">Listado de Tareas</h2>
+              <p class="text-xl mt-5 mb-10 text-center">
+                  Administra tus
+                  <span class="text-indigo-600 font-bold ">Tareas</span>
+              </p>
+              <div id="tareas">
+                  <p class="text-xl mt-5 mb-10 text-center">No Hay Tareas</p>
+              </div>
+          </div>
+      </div>
+
+      <script src="js/app.js"></script>
+</body>
+</html>
